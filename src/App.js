@@ -1,27 +1,45 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import './styles/App.css';
 import PostsList from "./components/PostsList";
+import Button from "./components/UI/button/Button";
+import Input from "./components/UI/input/Input";
+import PostForm from "./components/PostForm";
+import Select from "./components/UI/select/Select";
+import PostFilter from "./components/PostFilter";
+import Modal from "./components/UI/modal/Modal";
+import { usePosts } from "./hooks/usePosts";
+import axios from "axios";
 
 function App() {
-    // const [ value, setValue ] = useState('Text your data');
-    const [ posts, setPosts ] = useState([
-      {id: 1, title: 'React app', body: 'description sd'},
-      {id: 2, title: 'React app sdf s', body: ' sdf description'},
-      {id: 3, title: 'React s df app', body: 'descri sdf sd fption'},
-      {id: 4, title: ' sdf sdReact app', body: 'descsdf sdf sfription'},
-    ])
+    const [ posts, setPosts ] = useState([])
+    
+    const [ filter, setFilter ] = useState({sort: '', query: ''});
+    const [ modal, setModal ] = useState(false);
+    const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
- 
+    async function fetchPosts() {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      setPosts(response.data)
+    }
+    
+    const createPost = (newPost) => {
+        setPosts([...posts, newPost]);
+        setModal(false);
+    }
+
+    const removePost = (post) => {
+        setPosts(posts.filter( item => item.id !== post.id))
+    }
+
 
   return (
       <div className="App container">
-        <PostsList posts={posts} />
-          {/* <h1>{value}</h1>
-          <input 
-            type="text"
-            value={value}
-            onChange={event => setValue(event.target.value)}
-            /> */}
+        <Modal visible={modal} setVisible={setModal}>
+          <PostForm create={createPost} />
+        </Modal>
+        <PostFilter filter={filter} setFilter={setFilter} />
+        <Button style={{marginLeft: 'auto', display: 'flex'}} onClick={() => setModal(true)}>Add post</Button>
+        <PostsList remove={removePost} posts={sortedAndSearchedPosts} title='My posts' />
       </div>
   );
 }
