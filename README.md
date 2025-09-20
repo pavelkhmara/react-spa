@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# React Fundamentals Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed step by step while learning **React.js** from scratch.  
+It implements the most common functionality found in modern applications: components, routing, forms, state management, API calls, and reusable UI elements — all styled with responsive, modern CSS.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📚 Topics Covered
 
-### `npm start`
+### Basics
+- **Introduction & Theory**: Core React concepts and project setup with Create React App.
+- **JSX**: Writing UI code inside JavaScript.
+- **App Component & State**: Using `useState` to manage component state.
+- **Controlled Input**: Handling input values in React.
+- **First Functional Component** and **First Class Component**.
+- **Hooks**: `useState`, `useEffect` basics.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Styling
+- Using **CSS classes** and **modules** for scoped styling.
+- Custom **UI Library**: reusable components with `props.children`.
+- Preventing page reload on form submit.
+- **Ref & Uncontrolled Components**: Using `useRef` to access DOM elements.
+- **React DevTools**: debugging React apps in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Components & Data
+- **Props**: passing arguments to components.
+- **Lists & Keys**: rendering arrays of objects.
+- **Form to create posts**: controlled vs uncontrolled forms.
+- **Data exchange**: parent-to-child and child-to-parent communication.
+- **Conditional Rendering**.
 
-### `npm test`
+### Features
+- **Sorting & Filtering**: with dropdowns and search.
+- **Memoization**: optimizing with `useMemo`.
+- **Modal Windows**: reusable UI modal component.
+- **Animations**: with `react-transition-group`.
+- **Decomposition & Custom Hooks**.
+- **Server Communication**: fetching posts via Axios.
+- **Lifecycle & Effects**: `useEffect`.
+- **API Service (PostService)**.
+- **Loading Indicators** and custom **Loader Component**.
+- **Custom Hook `useFetching`**: data fetching with error handling.
+- **Pagination**: client-side and dynamic infinite scrolling with `useObserver`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Routing & Navigation
+- **React Router**: navigation with `BrowserRouter`, `Route`, `Switch`, `Redirect`.
+- **Dynamic Navigation**: `useHistory`, `useParams`.
+- **Comments Loading** for individual posts.
+- **Improved Navigation**: private and public routes.
+- **Global State with Context**: `useContext` for user authentication.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 UI & CSS Enhancements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project includes a custom modern responsive design:
+- Gradient **navigation bar**.
+- Animated **post cards**.
+- **Responsive layout** for desktop and mobile.
+- Smooth **page transitions**.
+- **Dark theme** support.
+- Stylish **forms and buttons**.
+- Clean **typography and spacing** for readability.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React.js** (Hooks, Context API, Router)
+- **Axios** for HTTP requests
+- **React Transition Group** for animations
+- **CSS Modules** for component-level styling
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📷 Preview
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*(Add screenshots or GIFs of your app here if available)*
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Installation & Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
 
-### Code Splitting
+# Go inside the project folder
+cd your-repo-name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Install dependencies
+npm install
 
-### Analyzing the Bundle Size
+# Start development server
+npm start
+```
+App will be available at: http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## ✨ Features Implemented
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Create, sort, filter, and delete posts
+- Modal windows for creating new posts
+- Pagination and infinite scroll
+- Routing with authentication (private/public routes)
+- Animated transitions
+- Responsive UI with dark theme support
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📖 Learning Goals
 
-### Deployment
+This repository serves as a practical guide to React fundamentals, combining theory and practice into a complete mini-blog application.
+It’s useful both as a portfolio project and as reference code for starting new React apps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was inspired by [React course tutorial](https://www.youtube.com/watch?v=GNrdg3PzpJQ&t)
+MIT License © 2025 Pavel Khmara
