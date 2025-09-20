@@ -32,17 +32,40 @@
 }
 
 .post__btn button {
-  background: #e53e3e;
-  color: white;
-  border: none;
+  color: #e53e3e;
+  background: white;
+  border: 2px solid #e53e3e;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.post__btn.alert button {
+  background: #e53e3e;
+  color: white;
 }
 
 .post__btn button:hover {
   background: #c53030;
+  color: white;
+  border-color: #c53030;
 }
 
+@media (max-width: 768px) {
+  .post {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .post__btn {
+    width: 100%;
+  }
+  
+  .post__btn button {
+    width: 100%;
+  }
+}
