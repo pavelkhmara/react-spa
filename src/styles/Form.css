@@ -54,3 +54,10 @@
 .form__button:hover {
   background: #5a67d8;
 }
+
+@media (max-width: 480px) {
+  
+  .form {
+    padding: 1rem;
+  }
+}
