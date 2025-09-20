@@ -4,6 +4,7 @@ const Select = ({defaultValue, options, value, onChange}) => {
   return (
     <select
         value={value}
+        key={defaultValue}
         onChange={e => onChange(e.target.value)}
     >
         <option disabled value="">{defaultValue}</option>
