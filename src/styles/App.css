@@ -6,11 +6,16 @@
 
 #root {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+html, body, #root {
+  height: 100%;
 }
 
 .App {
-    width: 800px;
+    /* width: 800px; */
 }
 
 
@@ -25,4 +30,44 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 4.5s infinite;
+  height: 100vh;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.page__wrapper {
+  margin-top: 30px;
+  display: flex;
+}
+
+.page {
+  padding: 10px;
+  border: 1px solid #5a67d8;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.page__current {
+  border: 2px solid #c53030;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  
 }
